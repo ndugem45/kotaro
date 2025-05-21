@@ -49,6 +49,16 @@
       line-height: 100%; /* 80px */
       letter-spacing: -3.2px;
       text-transform: uppercase;
+
+      span{
+        width: 70px;
+        height: 70px;
+        display: inline-block;
+        margin-inline: 1rem;
+        background-color: #FF580A;
+        position: relative;
+        top: 0.5rem;
+      }
     }
   }
 

@@ -1,0 +1,120 @@
+@use 'mixins';
+
+.explore{
+  padding-block: 80px;
+
+  .container{
+    padding-inline: 32px;
+  }
+
+  &__card{
+    background-color: white;
+    padding: 56px;
+    border-radius: 40px;
+    
+  }
+
+  &__group{
+    padding-block: 56px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    border-block: 1px solid #CCCCCC;
+  }
+
+  &__wrap{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .explore__item:nth-child(1){
+      flex: 2;
+      background-color: #EBE8E1;
+      justify-content: space-between;
+      gap: 80px;
+
+      h2{
+        font-size: 56px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
+        letter-spacing: -0.56px;
+        text-transform: uppercase;
+
+        span{
+          width: 24px;
+          height: 24px;
+          display: inline-block;
+          margin-inline: 0.8rem;
+          background-color: #0084FF;
+          position: relative;
+          top: -0.5rem;
+        }
+      }
+
+      span{
+        color: #AFAFAF;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.16px;
+      }
+    }
+
+    .explore__item:nth-child(2){
+      flex: 1;
+      background-color: #0084FF;
+      color: white;
+
+      div{
+        display: flex;
+        justify-content: space-between;
+        gap: 64px;
+
+        img{
+          width: 64px;
+          height: 64px;
+        }
+      }
+    }
+  }
+
+  &__item{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 16px;
+    padding: 24px;
+    border-radius: 24px;
+
+    &.black{
+      background: radial-gradient(62.6% 63.07% at 60.46% -4.1%, rgba(0, 0, 0, 0.70) 0%, #000 100%);
+      color: white;
+    }
+
+    &.last{
+      border-radius: 24px;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 50%, rgba(0, 0, 0, 0.80) 99.92%), url('') lightgray 0px -12.674px / 100% 123.3% no-repeat;
+      color: white;
+    }
+
+    span{
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: -0.16px;
+    }
+
+    p{
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%; /* 27px */
+      letter-spacing: -0.18px;
+    }
+  }
+}

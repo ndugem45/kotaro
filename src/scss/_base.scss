@@ -3,6 +3,7 @@
 *{
   box-sizing: border-box;
   margin: unset;
+  @include mixins.font('primary');
 }
 
 body {
@@ -48,8 +49,38 @@ section{
   border: 1px solid rgba(255, 255, 255, 0.40);
   color: white;
 
+  @include mixins.font('secondary');
+
   &.black{
     color: black;
     border: 1px solid #CCCCCC;
+  }
+}
+
+.btn{
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.16px;
+
+  display: flex;
+  padding: 20px 40px;
+  align-items: center;
+  gap: 8px;
+
+  border-radius: 56px;
+  background: #FF580A;
+
+  color: white;
+  text-decoration: none;
+
+  transition: all 300ms ease;
+
+  @include mixins.font('primary');
+
+  &:hover{
+    filter: brightness(0.9);
+    text-decoration: underline;
   }
 }

@@ -4,6 +4,9 @@
   padding-top: 176px;
   padding-bottom: 80px;
   background-color: #E08C30;
+  background: #E08C30 url('../assets/images/hero_new.webp') no-repeat;
+  background-position: center;
+  background-size: cover;
   color: white;
   
   &__title {
@@ -22,9 +25,11 @@
       display: inline-block;
       margin-inline: 0.8rem;
       background-color: #0084FF;
-      top: -1rem;
+      top: -1.5rem;
       position: relative;
-
+      background: url('../assets/images/hero_title_icon.webp') no-repeat;
+      background-position: center;
+      background-size: contain;
     }
 
     @include mixins.respond(lg) {
@@ -40,7 +45,7 @@
     display: flex;
     gap: 12px;
     align-items: center;
-    margin-bottom: 80px;
+    margin-bottom: 83px;
     flex-wrap: wrap;
   }
 
@@ -51,6 +56,8 @@
     font-weight: 400;
     line-height: 150%;
     letter-spacing: -0.18px;
+
+    @include mixins.font('secondary');
 
     @include mixins.respond(md) {
       max-width: 100%;

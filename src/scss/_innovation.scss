@@ -52,6 +52,8 @@
         font-weight: 400;
         line-height: 150%; /* 27px */
         letter-spacing: -0.18px;
+
+        @include mixins.font('secondary');
       }
     }
 
@@ -64,6 +66,10 @@
 
       &.center{
         padding-top: unset;
+      }
+
+      img{
+        object-fit: contain;
       }
     }
     
@@ -88,6 +94,9 @@
       display: inline-block;
       margin-inline: 0.8rem;
       background-color: #0084FF;
+      background: url('../assets/images/innovation_icon.webp') no-repeat;
+      background-position: center;
+      background-size: contain;
     }
   }
 
@@ -107,6 +116,8 @@
       line-height: 150%; /* 24px */
       letter-spacing: -0.16px;
       color: #AFAFAF;
+      
+      @include mixins.font('secondary');
     }
 
     p{
@@ -115,6 +126,8 @@
       font-weight: 400;
       line-height: 150%; /* 27px */
       letter-spacing: -0.18px;
+
+      @include mixins.font('secondary');
     }
   }
 }

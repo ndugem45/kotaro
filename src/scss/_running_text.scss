@@ -50,6 +50,9 @@
     height: 32px;
     background-color: #FF580A;
     flex-shrink: 0;
+    background: url('../assets/images/running_icon.webp') no-repeat;
+    background-position: center;
+    background-size: contain;
   }
 
   @keyframes running-xl {

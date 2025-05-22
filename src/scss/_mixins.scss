@@ -9,3 +9,12 @@
     @media (max-width: 1200px) { @content; }
   }
 }
+
+
+@mixin font($type) {
+  @if $type == 'primary' {
+    font-family: "Inter", sans-serif;
+  } @else {
+    font-family: 'General Sans', sans-serif;
+  }
+}

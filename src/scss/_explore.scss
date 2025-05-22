@@ -40,8 +40,8 @@
         font-style: normal;
         font-weight: 800;
         line-height: normal;
-        letter-spacing: -0.56px;
         text-transform: uppercase;
+        letter-spacing: -2.24px;
 
         span{
           width: 24px;
@@ -51,6 +51,9 @@
           background-color: #0084FF;
           position: relative;
           top: -0.5rem;
+          background: url('../assets/images/explore_icon.webp') no-repeat;
+          background-position: center;
+          background-size: contain;
         }
       }
 
@@ -93,11 +96,25 @@
     &.black{
       background: radial-gradient(62.6% 63.07% at 60.46% -4.1%, rgba(0, 0, 0, 0.70) 0%, #000 100%);
       color: white;
+      align-items: center;
+      position: relative;
+
+      span{
+        align-self: flex-start;
+      }
+
+      img{
+        position: absolute;
+        z-index: 1;
+        top: 51px;
+      }
     }
 
     &.last{
       border-radius: 24px;
-      background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 50%, rgba(0, 0, 0, 0.80) 99.92%), url('') lightgray 0px -12.674px / 100% 123.3% no-repeat;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 50%, rgba(0, 0, 0, 0.80) 99.92%), url('../assets/images/explore_right_illus.webp') lightgray 0px -12.674px / 100% 123.3% no-repeat;
+      background-position: top center;
+      background-size: cover;
       color: white;
     }
 
@@ -107,6 +124,8 @@
       font-weight: 400;
       line-height: normal;
       letter-spacing: -0.16px;
+
+      @include mixins.font('secondary');
     }
 
     p{
@@ -115,6 +134,8 @@
       font-weight: 400;
       line-height: 150%; /* 27px */
       letter-spacing: -0.18px;
+
+      @include mixins.font('secondary');
     }
   }
 }

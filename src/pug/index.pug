@@ -4,10 +4,19 @@ html
     meta(charset="UTF-8")
     title Modular Pug
     link(rel="stylesheet", href="style.css")
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@1&display=swap" rel="stylesheet">
   body
+    include parts/navbar.pug
     include parts/hero.pug
     include parts/running_text.pug
     include parts/innovation.pug
     include parts/explore.pug
     include parts/works.pug
+    include parts/artist.pug
     include parts/footer.pug
+
+    script(src="script.js")
+

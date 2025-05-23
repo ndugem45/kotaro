@@ -9,6 +9,10 @@
 
   .container{
     padding-inline: 32px;
+    
+    @include mixins.respond(md) {
+      padding-inline: 20px;
+    }
   }
 
   &__card{
@@ -62,6 +66,11 @@
           font-size: 38px;
         }
 
+        @include mixins.respond(sm) {
+          font-size: 28px;
+          letter-spacing: -1px;
+        }
+
         span{
           width: 24px;
           height: 24px;
@@ -73,6 +82,13 @@
           background: url('../assets/images/explore_icon.webp') no-repeat;
           background-position: center;
           background-size: contain;
+
+          @include mixins.respond(md) {
+            width: 22px;
+            height: 22px;
+            top: -0rem;
+            margin-inline: 0.4rem;
+          }
         }
       }
 

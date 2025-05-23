@@ -1,3 +1,7 @@
+AOS.init({
+	once: true,
+});
+
 let lastScrollY = window.scrollY;
 const navbar = document.getElementsByClassName("navbar")[0];
 let lastShowScrollY = lastScrollY;

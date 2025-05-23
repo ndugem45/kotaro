@@ -8,6 +8,10 @@
   background-position: center;
   background-size: cover;
   color: white;
+
+  @include mixins.respond(md) {
+    padding-top: 120px;
+  }
   
   &__title {
     font-size: 120px;
@@ -78,6 +82,10 @@
     align-items: center;
     margin-bottom: 83px;
     flex-wrap: wrap;
+
+    @include mixins.respond(md) {
+      margin-bottom: 42px;
+    }
   }
 
   &__desc{

@@ -20,6 +20,12 @@
     flex-direction: column;
     gap: 16px;
 
+    img{
+      @include mixins.respond(sm) {
+        width: 100%;
+      }
+    }
+
     .wrapper{
       display: flex;
       flex-direction: column;
@@ -121,6 +127,12 @@
       line-height: 100%; /* 24px */
       letter-spacing: -0.48px;
       text-transform: uppercase;
+
+      img{
+        @include mixins.respond(sm) {
+          width: 100%;
+        }
+      }
 
       .wrapper{
         gap: 8px;

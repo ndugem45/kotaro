@@ -88,6 +88,8 @@
       @include mixins.respond(md) {
         font-size: 38px;
         letter-spacing: -1.2px;
+        max-width: 100%;
+        word-break: break-word;
       }
 
       @include mixins.respond(sm) {
@@ -113,6 +115,12 @@
           margin-inline: 0.5rem;
           top: 0rem;
         }
+
+        @include mixins.respond(sm) {
+          width: 24px;
+          height: 24px;
+          margin-inline: 0.3rem;
+        }
       }
     }
   }
@@ -121,6 +129,12 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+
+    @include mixins.respond(md) {
+      flex-direction: column;
+      gap: 24px;
+      align-items: flex-start;
+    }
 
     p{
       max-width: 45%;
@@ -131,7 +145,7 @@
       letter-spacing: -0.18px;
 
       @include mixins.respond(md) {
-        max-width: 70%;
+        max-width: 100%;
         font-size: 14px;
         letter-spacing: -0.08px;
       }

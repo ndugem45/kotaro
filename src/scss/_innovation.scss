@@ -4,12 +4,23 @@
   padding-top: 120px;
   padding-bottom: 40px;
 
+  @include mixins.respond(md) {
+    padding-top: 40px;
+  }
+
   .container{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
     padding-bottom: 64px;
+
+    @include mixins.respond(md) {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 12px;
+    }
 
     &.innovation-content{
       padding: unset;
@@ -22,6 +33,11 @@
         display: flex;
         gap: 40px;
         align-items: stretch;
+
+        @include mixins.respond(lg) {
+          gap: 24px;
+          flex-direction: column;
+        }
       }
     }
   }
@@ -33,6 +49,10 @@
       justify-content: flex-end;
       gap: 40px;
 
+      @include mixins.respond(md) {
+        gap: 24px;
+      }
+
       h2{
         font-size: 40px;
         font-style: normal;
@@ -40,6 +60,11 @@
         line-height: normal;
         letter-spacing: -0.4px;
         text-transform: uppercase;
+
+        @include mixins.respond(md) {
+          font-size: 24px;
+          letter-spacing: -0.1px;
+        }
 
         span{
           color: #0084FF;
@@ -54,6 +79,10 @@
         letter-spacing: -0.18px;
 
         @include mixins.font('secondary');
+
+        @include mixins.respond(md) {
+          font-size: 14px;
+        }
       }
     }
 
@@ -64,12 +93,35 @@
       align-items: flex-end;
       padding-top: 24px;
 
+      @include mixins.respond(lg) {
+        align-items: flex-start;
+        gap: 24px;
+      }
+
       &.center{
         padding-top: unset;
+
+        img{
+          width: 504px;
+          
+          @include mixins.respond(xl) {
+            width: 300px;
+          }
+
+          @include mixins.respond(lg) {
+            width: 100%;
+            height: auto;
+          }
+        }
       }
 
       img{
         object-fit: contain;
+        width: 100%;
+
+        @include mixins.respond(lg) {
+          width: auto;
+        }
       }
     }
     
@@ -88,6 +140,12 @@
     text-transform: uppercase;
     max-width: 60%;
 
+    @include mixins.respond(md) {
+      font-size: 38px;
+      letter-spacing: -1.2px;
+      max-width: 100%;;
+    }
+
     span{
       width: 56px;
       height: 56px;
@@ -97,6 +155,12 @@
       background: url('../assets/images/innovation_icon.webp') no-repeat;
       background-position: center;
       background-size: contain;
+
+      @include mixins.respond(md) {
+        width: 24px;
+        height: 24px;
+        margin-inline: 0.5rem;
+      }
     }
   }
 
@@ -109,6 +173,13 @@
     align-items: flex-end;
     text-align: right;
 
+    @include mixins.respond(md) {
+      max-width: 100%;
+      gap: 8px;
+      align-items: flex-start;
+      text-align: left;
+    }
+
     div{
       font-size: 16px;
       font-style: normal;
@@ -118,6 +189,10 @@
       color: #AFAFAF;
       
       @include mixins.font('secondary');
+
+      @include mixins.respond(md) {
+        font-size: 14px;
+      }
     }
 
     p{
@@ -128,6 +203,10 @@
       letter-spacing: -0.18px;
 
       @include mixins.font('secondary');
+
+      @include mixins.respond(md) {
+        font-size: 14px;
+      }
     }
   }
 }

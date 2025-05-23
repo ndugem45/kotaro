@@ -5,14 +5,26 @@
   color: white;
   padding-block: 120px;
 
+  @include mixins.respond(md) {
+    padding-block: 40px;
+  }
+
   &__head{
     display: flex;
     justify-content: space-between;
     align-items: stretch;
     margin-bottom: 64px;
 
+    @include mixins.respond(md) {
+      flex-direction: column;
+    }
+
     &-left{
       width: 60%;
+
+      @include mixins.respond(md) {
+        width: 100%;
+      }
 
       h2{
         font-size: 80px;
@@ -22,6 +34,15 @@
         letter-spacing: -3.2px;
         text-transform: uppercase;
         margin-bottom: 32px;
+
+        @include mixins.respond(xl) {
+          font-size: 64px;
+        }
+
+        @include mixins.respond(md) {
+          font-size: 38px;
+          letter-spacing: -1.2px;
+        }
 
         span{
           color: #FF580A;
@@ -37,6 +58,12 @@
           background: url('../assets/images/works_icon.webp') no-repeat;
           background-position: center;
           background-size: contain;
+
+          @include mixins.respond(md) {
+            width: 50px;
+            height: 30px;
+            margin-inline: 0.3rem;
+          }
         }
       }
 
@@ -48,6 +75,11 @@
         letter-spacing: -0.18px;
 
         @include mixins.font('secondary');
+
+        @include mixins.respond(md) {
+          font-size: 14px;
+          letter-spacing: -0.08px;
+        }
       }
     }
 
@@ -58,6 +90,12 @@
       flex-direction: column;
       justify-content: space-between;
       text-align: right;
+     
+      @include mixins.respond(md) {
+        width: 100%;
+        text-align: left;
+        gap: 12px;
+      }
 
       span{
         color: #AFAFAF;
@@ -68,6 +106,11 @@
         letter-spacing: -0.16px;
 
         @include mixins.font('secondary');
+
+        @include mixins.respond(md) {
+          font-size: 14px;
+          letter-spacing: -0.06px;
+        }
       }
 
       p{
@@ -78,6 +121,11 @@
         letter-spacing: -0.18px;
 
         @include mixins.font('secondary');
+
+        @include mixins.respond(md) {
+          font-size: 14px;
+          letter-spacing: -0.08px;
+        }
       }
     }
   }
@@ -98,6 +146,10 @@
     align-items: center;
     position: relative;
 
+    @include mixins.respond(md) {
+      align-items: flex-start;
+    }
+
     .overlay{
       position: absolute;
       bottom: 0;
@@ -106,6 +158,10 @@
       display: none;
       user-select: none;
       pointer-events: none;
+      
+      @include mixins.respond(lg) {
+        right: 10%;
+      }
     }
 
     &:first-child{
@@ -118,6 +174,10 @@
 
       .overlay{
         display: block;
+
+        @include mixins.respond(md) {
+          display: none;
+        }
       }
 
       p{
@@ -139,6 +199,21 @@
       align-items: center;
       width: 50%;
 
+      @include mixins.respond(lg) {
+        width: 65%;
+      }
+
+      @include mixins.respond(md) {
+        width: 80%;
+        gap: 24px;
+      }
+
+      @include mixins.respond(sm) {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 24px;
+      }
+
       p{
         color: #AAA;
         font-size: 18px;
@@ -148,11 +223,21 @@
         letter-spacing: -0.18px;
 
         @include mixins.font('secondary');
+
+        @include mixins.respond(md) {
+          font-size: 14px;
+          letter-spacing: -0.08px;
+        }
       }
     }
 
     svg{
       filter: invert(1) grayscale(1) brightness(2);
+      
+      @include mixins.respond(md) {
+        width: 42px;
+        height: 42px;
+      }
     }
   }
 }

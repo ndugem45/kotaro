@@ -47,6 +47,10 @@
       letter-spacing: -0.16px;
 
       @include mixins.font('secondary');
+
+      @include mixins.respond(md) {
+        font-size: 14px;
+      }
     }
   }
 }

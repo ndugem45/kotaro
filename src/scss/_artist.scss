@@ -9,6 +9,10 @@
   flex-direction: column;
   gap: 40px;
 
+  @include mixins.respond(md) {
+    padding-block: 40px;
+  }
+
   &__left{
     max-width: 350px;
     padding-top: 24px;
@@ -40,7 +44,13 @@
         line-height: 100%; /* 24px */
         letter-spacing: -0.48px;
         text-transform: uppercase;
+
+        @include mixins.respond(md) {
+          font-size: 18px;
+          letter-spacing: -0.28px;
+        }
       }
+
     }
   }
 
@@ -50,6 +60,10 @@
     flex: 1;
     z-index: 1;
     padding-top: 40px;
+
+    @include mixins.respond(md) {
+      display: none;
+    }
     
     h2{
       width: 100%;
@@ -59,6 +73,14 @@
       line-height: 100%; /* 80px */
       letter-spacing: -3.2px;
       text-transform: uppercase;
+
+      @include mixins.respond(xl) {
+        font-size: 64px;
+      }
+
+      @include mixins.respond(md) {
+        font-size: 38px;
+      }
 
       span{
         width: 62px;
@@ -80,6 +102,12 @@
     flex-direction: column;
     align-items: flex-end;
     justify-content: space-between;
+
+    @include mixins.respond(md) {
+      text-align: left;
+      align-items: flex-start;
+      gap: 32px;
+    }
 
     .wrapper{
       display: flex;
@@ -116,6 +144,11 @@
           line-height: 100%; /* 24px */
           letter-spacing: -0.48px;
           text-transform: uppercase;
+
+          @include mixins.respond(md) {
+            font-size: 18px;
+            letter-spacing: -0.28px;
+          }
         }
       }
 
@@ -130,6 +163,11 @@
       letter-spacing: -0.18px;
 
       @include mixins.font('secondary');
+
+      @include mixins.respond(md) {
+        font-size: 14px;
+        text-align: left;
+      }
     }
   }
 
@@ -145,16 +183,55 @@
     line-height: 150%; /* 27px */
     letter-spacing: -0.18px;
 
+    @include mixins.respond(md) {
+      font-size: 14px;
+      letter-spacing: -0.08px;
+      flex-direction: column;
+      gap: 24px;
+    }
+
     @include mixins.font('secondary');
 
     span{
       flex-shrink: 0;
       color: #AAA;
     }
+
+    h2{
+      width: 100%;
+      font-size: 38px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 100%; /* 80px */
+      letter-spacing: -1px;
+      text-transform: uppercase;
+      display: none;
+
+      @include mixins.respond(md) {
+        display: block ;
+      }
+
+      span{
+        width: 32px;
+        height: 32px;
+        display: inline-block;
+        position: relative;
+        background-color: #FF580A;
+        margin-inline: 0.4rem;
+        background: url('../assets/images/artist_icon.webp') no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+    }
   }
 
   .container:nth-child(2){
     display: flex;
     justify-content: space-between;
+
+    @include mixins.respond(md) {
+      flex-direction: column;
+      gap: 32px;
+    }
   }
 }

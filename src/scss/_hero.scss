@@ -19,6 +19,17 @@
     max-width: 70%;
     margin-bottom: 32px;
 
+    @include mixins.respond(lg) {
+      font-size: 80px;
+      letter-spacing: -3px;
+    }
+
+    @include mixins.respond(md) {
+      font-size: 48px;
+      letter-spacing: -1.5px;
+      max-width: 90%;
+    }
+
     &-wrap{
       display: flex;
       flex-direction: row;
@@ -47,14 +58,17 @@
       background: url('../assets/images/hero_title_icon.webp') no-repeat;
       background-position: center;
       background-size: contain;
-    }
 
-    @include mixins.respond(lg) {
-      font-size: 80px;
-    }
+      @include mixins.respond(lg) {
+        top: -1rem;
+      }
 
-    @include mixins.respond(md) {
-      font-size: 48px;
+      @include mixins.respond(md) {
+        top: -0.5rem;
+        width: 25px;
+        height: 24px;
+        margin-inline: 0.2rem;
+      }
     }
   }
 

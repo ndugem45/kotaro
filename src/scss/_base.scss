@@ -51,6 +51,11 @@ section{
 
   @include mixins.font('secondary');
 
+  @include mixins.respond(md) {
+    font-size: 14px;
+    padding: 4px 12px;
+  }
+
   &.black{
     color: black;
     border: 1px solid #CCCCCC;
@@ -78,6 +83,11 @@ section{
   transition: all 300ms ease;
 
   @include mixins.font('primary');
+
+  @include mixins.respond(md) {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
 
   &:hover{
     filter: brightness(0.9);

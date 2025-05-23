@@ -3,6 +3,10 @@
 .explore{
   padding-block: 80px;
 
+  @include mixins.respond(md) {
+    padding-block: 40px;
+  }
+
   .container{
     padding-inline: 32px;
   }
@@ -11,7 +15,11 @@
     background-color: white;
     padding: 56px;
     border-radius: 40px;
-    
+
+    @include mixins.respond(md) {
+      border-radius: 32px;
+      padding: 32px;
+    }
   }
 
   &__group{
@@ -22,6 +30,13 @@
     grid-column-gap: 16px;
     grid-row-gap: 16px;
     border-block: 1px solid #CCCCCC;
+
+
+    @include mixins.respond(xl){
+      padding-block: 32px;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 42px;
+    }
   }
 
   &__wrap{
@@ -42,6 +57,10 @@
         line-height: normal;
         text-transform: uppercase;
         letter-spacing: -2.24px;
+
+        @include mixins.respond(md) {
+          font-size: 38px;
+        }
 
         span{
           width: 24px;
@@ -80,6 +99,11 @@
         img{
           width: 64px;
           height: 64px;
+
+          @include mixins.respond(sm) {
+            width: 32px;
+            height: 32px;
+          }
         }
       }
     }
@@ -99,6 +123,10 @@
       align-items: center;
       position: relative;
 
+      @include mixins.respond(xl) {
+        align-items: flex-start;
+      }
+
       span{
         align-self: flex-start;
       }
@@ -106,7 +134,20 @@
       img{
         position: absolute;
         z-index: 1;
-        top: 51px;
+        top: 45px;
+        width: 120%;
+        max-width: 476px;
+        height: auto;
+
+        @include mixins.respond(xl) {
+          position: relative;
+          top: unset;
+          margin: auto;
+        }
+
+        @include mixins.respond(md) {
+          width: 100%;
+        }
       }
     }
 
@@ -116,6 +157,10 @@
       background-position: top center;
       background-size: cover;
       color: white;
+
+      @include mixins.respond(xl) {
+        padding-top: 200px;
+      }
     }
 
     span{
@@ -136,6 +181,10 @@
       letter-spacing: -0.18px;
 
       @include mixins.font('secondary');
+
+      @include mixins.respond(sm) {
+        font-size: 14px;
+      }
     }
   }
 }

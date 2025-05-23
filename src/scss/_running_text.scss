@@ -14,6 +14,14 @@
     max-width: 100%;
   }
 
+  @include mixins.respond(lg) {
+    gap: 18px;
+  }
+
+  @include mixins.respond(md) {
+    gap: 12px;
+  }
+
   &__wrap {
     display: flex;
     flex-direction: row;
@@ -27,10 +35,12 @@
 
     @include mixins.respond(lg) {
       animation: running-lg 20s linear infinite;
+      gap: 18px;
     }
 
     @include mixins.respond(md) {
       animation: running-md 20s linear infinite;
+      gap: 12px;
     }
 
   }
@@ -43,6 +53,11 @@
     letter-spacing: -1.36px;
     text-transform: uppercase;
     flex-shrink: 0;
+
+    @include mixins.respond(md) {
+      font-size: 32px;
+      letter-spacing: -1px;
+    }
   }
 
   .dot {

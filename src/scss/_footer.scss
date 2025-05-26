@@ -35,11 +35,15 @@
       text-decoration: none;
       color: #AAA;
 
-      @include mixins.font('secondary');
+      &{
+        @include mixins.font('secondary');
+      }
     }
 
     p{
-      @include mixins.font('secondary');
+      &{
+        @include mixins.font('secondary');
+      }
     }
   }
 
@@ -150,7 +154,9 @@
         letter-spacing: -0.08px;
       }
 
-      @include mixins.font('secondary');
+      &{
+        @include mixins.font('secondary');
+      }
     }
   }
 
@@ -173,7 +179,9 @@
       text-underline-offset: auto;
       text-underline-position: from-font;
 
-      @include mixins.font('secondary');
+      &{
+        @include mixins.font('secondary');
+      }
     }
   }
 }

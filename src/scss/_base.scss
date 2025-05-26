@@ -49,7 +49,9 @@ section{
   border: 1px solid rgba(255, 255, 255, 0.40);
   color: white;
 
-  @include mixins.font('secondary');
+  &{
+    @include mixins.font('secondary');
+  }
 
   @include mixins.respond(md) {
     font-size: 14px;

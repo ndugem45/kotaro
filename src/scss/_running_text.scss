@@ -31,15 +31,15 @@
     white-space: nowrap;
     width: fit-content;
     
-    animation: running-xl 20s linear infinite;
+    animation: running-xl 30s linear infinite;
 
     @include mixins.respond(lg) {
-      animation: running-lg 20s linear infinite;
+      animation: running-lg 30s linear infinite;
       gap: 18px;
     }
 
     @include mixins.respond(md) {
-      animation: running-md 20s linear infinite;
+      animation: running-md 30s linear infinite;
       gap: 12px;
     }
 

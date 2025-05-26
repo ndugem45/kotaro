@@ -195,7 +195,9 @@
       line-height: normal;
       letter-spacing: -0.16px;
 
-      @include mixins.font('secondary');
+      &{
+        @include mixins.font('secondary');
+      }
     }
 
     p{
@@ -205,7 +207,9 @@
       line-height: 150%; /* 27px */
       letter-spacing: -0.18px;
 
-      @include mixins.font('secondary');
+      &{
+        @include mixins.font('secondary');
+      }
 
       @include mixins.respond(sm) {
         font-size: 14px;

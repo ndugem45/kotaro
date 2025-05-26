@@ -40,7 +40,9 @@
         letter-spacing: -0.16px;
         color: #AAA;
           
-        @include mixins.font('secondary');
+        &{
+          @include mixins.font('secondary');
+        }
       }
 
       p{
@@ -146,7 +148,9 @@
           letter-spacing: -0.16px;
           color: #AAA;
           
-          @include mixins.font('secondary');
+          &{
+            @include mixins.font('secondary');
+          }
         }
 
         p{
@@ -174,7 +178,9 @@
       line-height: 150%; /* 27px */
       letter-spacing: -0.18px;
 
-      @include mixins.font('secondary');
+      &{
+        @include mixins.font('secondary');
+      }
 
       @include mixins.respond(md) {
         font-size: 14px;
@@ -202,7 +208,9 @@
       gap: 24px;
     }
 
-    @include mixins.font('secondary');
+    &{
+      @include mixins.font('secondary');
+    }
 
     span{
       flex-shrink: 0;

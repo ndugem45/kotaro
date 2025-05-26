@@ -4,7 +4,7 @@
   padding-top: 176px;
   padding-bottom: 80px;
   background-color: #E08C30;
-  background: #E08C30 url('../assets/images/hero_new.webp') no-repeat;
+  background: #E08C30 url('../assets/images/hero_new_wide.png') no-repeat;
   background-position: center;
   background-size: cover;
   color: white;
@@ -47,7 +47,9 @@
         line-height: 100%; /* 16px */
         letter-spacing: -0.16px;
 
-        @include mixins.font('secondary');
+        &{
+          @include mixins.font('secondary');
+        }
       }
     }
 
@@ -96,7 +98,9 @@
     line-height: 150%;
     letter-spacing: -0.18px;
 
-    @include mixins.font('secondary');
+    &{
+      @include mixins.font('secondary');
+    }
 
     @include mixins.respond(md) {
       max-width: 100%;

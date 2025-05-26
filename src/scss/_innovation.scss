@@ -78,7 +78,9 @@
         line-height: 150%; /* 27px */
         letter-spacing: -0.18px;
 
-        @include mixins.font('secondary');
+        &{
+          @include mixins.font('secondary');
+        }
 
         @include mixins.respond(md) {
           font-size: 14px;
@@ -188,7 +190,9 @@
       letter-spacing: -0.16px;
       color: #AFAFAF;
       
-      @include mixins.font('secondary');
+      &{
+        @include mixins.font('secondary');
+      }
 
       @include mixins.respond(md) {
         font-size: 14px;
@@ -202,7 +206,9 @@
       line-height: 150%; /* 27px */
       letter-spacing: -0.18px;
 
-      @include mixins.font('secondary');
+      &{
+        @include mixins.font('secondary');
+      }
 
       @include mixins.respond(md) {
         font-size: 14px;
